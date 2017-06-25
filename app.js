@@ -39,7 +39,7 @@ io.sockets.on('connection',function(socket){
 		socket.emit ('load old msgs', rows)
 		});
 	socket.on('new user',function(data, callback){
-		if (nicknames.indexOf(data) != -1){
+		if (nicknames.indexOf(data) !== -1){
 			callback(false);
 		} else{
 			callback(true);
