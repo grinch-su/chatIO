@@ -13,8 +13,9 @@ db.run("CREATE TABLE IF NOT EXISTS chat (nick TEXT, msg TEXT, time TEXT)");
 
 app.use(express.static(path.join(__dirname,'public')));
 
-server.listen(3000);
-console.log('Listening on port 3000');
+server.listen(process.env.PORT);
+
+console.log('Listening on port');
 
 function format(d){
 	   var dd = d.getDate()
